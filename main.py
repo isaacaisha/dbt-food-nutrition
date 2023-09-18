@@ -42,6 +42,7 @@ def home():
 
         if 'ingredients' in request.form:
             ingredients = request.form['ingredients']
+            print(f'Ingredients received: {ingredients}')
             # Construct the API request URL with the user's ingredients
             api_url = (f'https://api.edamam.com/api/nutrition-data?app_id={app_id_nutri}&app_key={app_key_nutri}'
                        f'&nutrition-type={type_nutri}&ingr={ingredients}')
