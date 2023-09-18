@@ -1,0 +1,196 @@
+body {
+    /*background-image: url('../images/logo1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    background-color: #AEFAFC;
+    color: #4044E6;
+    font-family: 'Cardo';
+    padding: 0.5rem;
+    text-align: center;
+}
+/*
+.large-image {
+    width: 100%;
+    max-width: 600px;
+}
+*/
+.title {
+    background-color: #fff;
+    border: 0.1rem solid #1295FA;
+    border-radius: 0.5rem;
+    color: #9126E8;
+    font-family: 'Cardo';
+    margin: 0;
+    text-decoration: underline;
+}
+
+.sub_title, label, .recipe_label, .ingredient, .ingredient-text {
+    background-color: #000;
+    border: 0.1rem solid #1295FA;
+    border-radius: 0.5rem;
+    color:#fff;
+    padding: 0.3rem;
+}
+
+.sub_title {
+    font-family: 'Merriweather', sans-serif;
+    font-display: swap;
+}
+
+.recipe_label {
+    font-family: 'Montserrat', sans-serif;
+    font-display: swap;
+}
+
+.ingredient {
+    font-family: 'Merriweather', sans-serif;
+    font-display: swap;
+}
+
+span {
+    color: #9126E8;
+    text-decoration: underline;
+}
+
+label {
+    color: #198754;
+    padding: 0.3rem;
+}
+
+input {
+    border: 0.1rem solid #1295FA;
+    border-radius: 0.5rem;
+    height: 1.9rem;
+    padding: 0.3rem;
+    text-align: center;
+    width: 17rem;
+}
+
+.click_on {
+    color: #198754;
+    margin: 0.7rem 0 0;
+}
+
+.btn:hover {
+    color: #32ff7e;
+}
+
+.jumbotron {
+  animation: color-change 10s linear infinite;
+  background-color: #47FFAC;
+  border: 0.1rem solid #1295FA;
+  margin: 0;
+}
+
+@keyframes color-change {
+  25% {
+    background-color: #FC5378;
+  }
+
+  50% {
+    background-color: #4044E6;
+  }
+
+  100% {
+    background-color: #47FFAC;
+  }
+}
+
+.recipes {
+    color: #9126E8;
+    margin-top: 1.9rem;
+}
+
+img {
+    border: 0.1rem solid #fff;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.no-bullet {
+/* This will remove the bullet (dot) from the list items inside the element with class "no-bullet" */
+    list-style: none;
+    padding: 0;
+}
+
+.click-full-recipe {
+    margin: 0 0 0.3rem;
+}
+
+.time, .full-recipe {
+    background-color: #AEFAFC;
+    border: 0.1rem solid #1295FA;
+    border-radius: 0.5rem;
+    color: #1295FA;
+    padding: 0.3rem;
+    text-decoration: None;
+}
+
+.full-recipe {
+    color: #198754;
+    font-family: 'Sacramento', sans-serif;
+    font-display: swap;
+}
+
+.full-recipe:hover {
+    color: #9126E8;
+    font-size: 1.9rem;
+    text-decoration: None;
+}
+
+hr {
+    margin: 0 auto 1rem;
+    width: 73%;
+}
+
+textarea {
+    border: 0.1rem solid #1295FA;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    text-align: center;
+    width: 23rem;
+}
+
+.recipe_span, .nutritional {
+    color: #9126E8;
+    font-size: 1.9rem;
+    margin-top: 1rem;
+}
+
+.nutri_hr {
+    margin: 1.9rem auto;
+}
+
+#footer {
+    text-align: center;
+}
+
+.fa-inverse {
+    background-color: #9126E8;
+    border: 0.1rem solid #AEFAFC;
+    border-radius: 55%;
+    color: #fff;
+}
+
+.fa-inverse:hover {
+    color: #6ABFA6;
+    width: 3.7rem;
+}
+
+.fas {
+    color: transparent !important;
+}
+
+.copyright {
+    background-color: #fff;
+    border: 0.1rem solid #1295FA;
+    border-radius: 0.5rem;
+    color: #9A30F3;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    text-decoration: None
+}
+# --------------------------------------------------- 🔥👌🏿💚😇❤️🔥 ---------------------------------------------------#

@@ -1,0 +1,99 @@
+{% extends 'header.html' %}
+
+{% block title %} Welcome to {% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/images/favicon1.ico') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="mb-3 sub_title">
+   <h3>Enter the Desired F😎😇D<br>to Get the <span>B€ST - R€CIP€S</span> At Your DISP😇SITI🤪NS ¡!¡</h3>
+</div>
+
+<form method="post" onsubmit="return validateRecipeForm()">
+    <label>1° Type What to C😂🤣K for Dinner:</label><br>
+    <div id="recipe-error-message" class="text-danger"></div>
+    <input type="text" name="search_query" placeholder="Enter a search query (e.g., Mafe)"
+        oninvalid="this.setCustomValidity('Please enter a search query.')"
+        oninput="this.setCustomValidity('')"><br>
+    <p class="click_on">2° Click on the button below<br>🔥👇🏿🔥</p>
+    <button class="mb-1 btn btn-outline-success btn-lg" type="submit">👌🏿Recipe Research💪🏿</button>
+</form>
+
+<div class="recipes">
+    <div class="">
+        {% if recipe_data %}
+            {% for recipe in recipe_data.hits[:19] %}
+            <div class="mb-1">
+                <div class="mb-1 recipes"><span class="recipe_span">RECIPES ¡!¡</span></div>
+                <div class="p-2 rounded-3 jumbotron">
+                    <div class="container-fluid py-2">
+                        <h4 class="recipe_label">{{ recipe.recipe.label }}</h4>
+                        <img src="{{ recipe.recipe.image }}" alt="{{ recipe.recipe.label }}">
+                        <ul class="no-bullet">
+                            {% for ingredient in recipe.recipe.ingredientLines %}
+                                <li class="ingredient">{{ ingredient }}</li>
+                            {% endfor %}
+                        </ul>
+                        <p class="time">Total Time: {{ recipe.recipe.totalTime }} minutes</p>
+                        <p class="click-full-recipe">🔥👇🏿🔥</p>
+                        <a class="full-recipe" href="{{ recipe.recipe.url }}" target="_blank">👍🏿View Full Recipe💪🏿</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+<hr class="nutri_hr">
+
+<div class="mb-3 sub_title">
+   <h3>Full analysis<br>of <span>F😎😇D - R€CIP€S</span> or<br>Ingredients ¡!¡</h3>
+</div>
+
+<form method="post" action="{{ url_for('home') }}" onsubmit="return validateNutriForm()">
+    <label>1° Enter F🤣😭D Recipe<br>or/and<br>Recipe('s') Quantity<br>or/and<br>Ingredient('s') Quantity:</label><br>
+    <div id="nutri-error-message" class="text-danger"></div>
+    <textarea id="nutri-ingredients"
+              rows="3" cols="50"
+              placeholder="Enter a full recipe&#10;or&#10;ingredients here (e.g., 9g Eggs, 19g Breads.. .)"></textarea><br>
+    <p class="click_on">2° Click on the button below<br>🔥👇🏿🔥</p>
+    <button class="mb-1 btn btn-outline-success btn-lg" type="submit">Nutri Analysis</button>
+</form>
+
+<div class="nutritional-info">
+    {% if nutritional_info %}
+    <div class="mb-1 nutritional"><span>Nutritional Information ¡!¡</span></div>
+        {% for ingredient in nutritional_info.ingredients %}
+            <h4 class="ingredient-text">{{ ingredient.text }}</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nutrient</th>
+                        <th>Quantity</th>
+                        <th>Unit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for nutrient, info in nutritional_info.totalNutrients.items() %}
+                        <tr>
+                            <td>{{ nutrient }}</td>
+                            <td>{{ info.quantity }}</td>
+                            <td>{{ info.unit }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endfor %}
+    {% endif %}
+</div>
+
+<hr class="nutri_hr">
+
+{% endblock %}
+
+{% block footer %} {% endblock %}
