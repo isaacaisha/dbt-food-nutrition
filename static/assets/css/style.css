@@ -21,6 +21,7 @@ body {
     border-radius: 0.5rem;
     color: #9126E8;
     font-family: 'Cardo';
+    font-size: 1.9rem;
     margin: 0;
     text-decoration: underline;
 }
@@ -72,8 +73,8 @@ input {
     margin: 0.7rem 0 0;
 }
 
-.btn:hover {
-    color: #32ff7e;
+#content > form:nth-child(3) > button, #content > form:nth-child(7) > button {
+    color: #9126E8;
 }
 
 .jumbotron {
